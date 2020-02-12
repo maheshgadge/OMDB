@@ -1,0 +1,162 @@
+#movies img, #movie img{
+  width:100%;
+}
+
+#movieLibrary img, #movie img{
+  width:100%;
+}
+
+@media(min-width:860px){
+  #movies .col-md-3 .well{
+    height: 390px;
+    width:100%;
+  }
+
+  #movies .col-md-3 img{
+    height:240px;
+    overflow: hidden;
+    background: url(http://placekitten.com/200/300) no-repeat scroll 0 0;
+  }
+
+  .button1 {
+    position: absolute;
+    width: 200px;
+    
+    top: 80px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .35s ease;
+    text-shadow: 2px 2px #000000;
+    font-size: large;
+  }
+  
+  .button1 a {
+    width: 100px;
+    padding: 12px 18px;
+    text-align: center;
+    color: white;
+    border: solid 2px white;
+    z-index: 1;
+  }
+  
+  .img-hover-zoom:hover .button1 {
+    opacity: 1;
+  }
+  
+  .button2 {
+    position: absolute;
+    width: 200px;
+    
+    top: 180px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .35s ease;
+    text-shadow: 2px 2px #000000;
+    font-size: large;
+  }
+  
+  .button2 a {
+    width: 100px;
+    padding: 12px 18px;
+    text-align: center;
+    color: white;
+    border: solid 2px white;
+    z-index: 1;
+  }
+  
+  .img-hover-zoom:hover .button2 {
+    opacity: 1;
+  }
+  
+}
+
+@media(max-width:860px){
+
+  #movies .col-md-3 img{
+    overflow: hidden;
+    background: url(http://placekitten.com/200/300) no-repeat scroll 0 0;
+  }
+
+  .button1 {
+    position: absolute;
+    width: 30%;
+    margin-right: 35%;
+    margin-left: 35%;
+    top: 20%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .35s ease;
+    text-shadow: 2px 2px #000000;
+    font-size: large;
+  }
+  
+  .button1 a {
+    width: 20%;
+    padding: 12px 18px;
+    text-align: center;
+    color: white;
+    border: solid 2px white;
+    z-index: 1;
+  }
+  
+  .img-hover-zoom:hover .button1 {
+    opacity: 1;
+  }
+  
+  .button2 {
+    position: absolute;
+    width: 30%;
+    margin-right: 35%;
+    margin-left: 35%;
+    top: 60%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .35s ease;
+    text-shadow: 2px 2px #000000;
+    font-size: large;
+  }
+  
+  .button2 a {
+    width: 20%;
+    padding: 12px 18px;
+    text-align: center;
+    color: white;
+    border: solid 2px white;
+    z-index: 1;
+  }
+  
+  .img-hover-zoom:hover .button2 {
+    opacity: 1;
+  }
+
+}
+
+.img-hover-zoom img {
+  transition: transform .5s ease;
+  filter: grayscale(0%);
+}
+
+.img-hover-zoom:hover img {
+  transform: scale(1.3);
+  filter: grayscale(70%);
+  display: block;
+}
+
+.edit {
+	padding-top: 7px;	
+	padding-right: 7px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: none;
+}
+
+.edit a {
+	color: #000;
+}
+
+/* Solid border */
+hr.solid {
+  border-top: 3px solid #bbb;
+}
+
