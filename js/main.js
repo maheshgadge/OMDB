@@ -1,9 +1,9 @@
 (function () {
 
-  let firstAPICall = axios.get('http://www.omdbapi.com?i=tt6751668&&apikey=3cccb84d')
-  let secondAPICall = axios.get('http://www.omdbapi.com?i=tt2584384&&apikey=3cccb84d')
-  let thirdAPICall = axios.get('http://www.omdbapi.com?i=tt2935510&&apikey=3cccb84d')
-  let fourthAPICall = axios.get('http://www.omdbapi.com?i=tt0312098&&apikey=3cccb84d')
+  let firstAPICall = axios.get('https://www.omdbapi.com?i=tt6751668&&apikey=3cccb84d')
+  let secondAPICall = axios.get('https://www.omdbapi.com?i=tt2584384&&apikey=3cccb84d')
+  let thirdAPICall = axios.get('https://www.omdbapi.com?i=tt2935510&&apikey=3cccb84d')
+  let fourthAPICall = axios.get('https://www.omdbapi.com?i=tt0312098&&apikey=3cccb84d')
 
   Promise.all([firstAPICall, secondAPICall, thirdAPICall, fourthAPICall])
     .then(response => {
@@ -38,7 +38,7 @@ $(document).ready(() => {
 });
 
 function getMovies(searchText){
-  axios.get('http://www.omdbapi.com?s='+searchText+'&&apikey=3cccb84d')
+  axios.get('https://www.omdbapi.com?s='+searchText+'&&apikey=3cccb84d')
     .then((response) => {
       console.log(response);
       let movies = response.data.Search;
@@ -74,10 +74,11 @@ function movieSelected(id){
 function getMovie(){
   let movieId = sessionStorage.getItem('movieId');
 
-  axios.get('http://www.omdbapi.com?i='+movieId+'&&apikey=3cccb84d')
+  axios.get('https://www.omdbapi.com?i='+movieId+'&&apikey=3cccb84d')
     .then((response) => {
       console.log(response);
       let movie = response.data;
+
       let output =`
         <div class="row">
           <div class="col-md-4">
@@ -101,7 +102,7 @@ function getMovie(){
             <h3>Plot</h3>
             ${movie.Plot}
             <hr>
-            <a href="http://imdb.com/title/${movie.imdbID}" target="_blank" class="btn btn-primary">View IMDB</a>
+            <a href="https://imdb.com/title/${movie.imdbID}" target="_blank" class="btn btn-primary">View IMDB</a>
             <a href="index.html" class="btn btn-default">Go Back To Search</a>
           </div>
         </div>
